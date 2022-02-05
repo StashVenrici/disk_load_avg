@@ -7,6 +7,6 @@ if [ "$count" -le 10 ]; then
     exit 0
 else
     echo "CRITICAL: One or more disks have exceeded the limit 30% at last hr"
-    tail -n 3 /var/log/disk_load_avg.log
+    tail -n 10 /var/log/disk_load_avg.log
     exit 2
 fi
